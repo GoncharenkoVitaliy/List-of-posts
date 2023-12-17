@@ -2,51 +2,58 @@ import { useRef, useState } from "react";
 import { MyButton } from "../../UI/button/MyButton";
 import { MyInput } from "../../UI/input/MyInput";
 import { nanoid } from "nanoid/non-secure";
+import styles from "./PostForm.modal.css";
 
-export function PostForm({create}) {
+export function PostForm({ create }) {
   const [post, setPost] = useState({
-    title: '',
-    body: '',
+    title: "",
+    body: "",
   });
 
   const addNewPost = (event) => {
     event.preventDefault();
     const newPost = {
-      ...post, id: nanoid()
+      ...post,
+      id: nanoid(),
     };
     create(newPost);
-    setPost({title: '', body: ''});
+    setPost({ title: "", body: "" });
   };
 
   return (
-    <form>
-        <label>
-          Название поста
-          {/* управляемый компанент */}
-          <MyInput
-            value={post.title}
-            onChange={(event) => setPost({
+    <form className={styles.form}>
+      {/* управляемый компанент */}
+      <div className={styles.nam}>
+        <MyInput
+          
+          value={post.title}
+          onChange={(event) =>
+            setPost({
               ...post,
-              title: event.target.value
-            })}
-            type="text"
-            placeholder="Название поста"
-          />
-        </label>
-        <label>
-          Описание поста
-          <MyInput
-            value={post.body}
-            onChange={(event) => setPost({
+              title: event.target.value,
+            })
+          }
+          type="text"
+          placeholder="Название поста"
+        />
+      </div>
+      <div className={styles.desc}>
+        <MyInput
+          vaue={post.body}
+          onChange={(event) =>
+            setPost({
               ...post,
-              body: event.target.value
-            })}
-            type="text"
-            placeholder="Описание поста"
-          />
-        </label>
+              body: event.target.value,
+            })
+          }
+          type="text"
+          placeholder="Описание поста"
+        />
+      </div>
+      <div>
         <MyButton onClick={addNewPost}>Создать пост</MyButton>
-      </form>
+      </div>
+    </form>
   );
 }
 //   {

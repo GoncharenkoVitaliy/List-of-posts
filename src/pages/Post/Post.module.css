@@ -1,0 +1,28 @@
+.post {
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* text-align: center; */
+  margin: 0 auto;
+}
+.button {
+  margin-top: 30px;
+  text-align: left;
+}
+/* .post__filter{
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+} */
+.loader {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.hr {
+  margin: 10px 0;
+}

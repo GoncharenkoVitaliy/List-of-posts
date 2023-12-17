@@ -1,0 +1,15 @@
+.navbar {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background: lightgray;
+  padding: 0 15px;
+}
+.navbar__links {
+  margin-left: auto;
+  font-size: 20px;
+}
+.navbar__links > a {
+  margin-right: 15px;
+}

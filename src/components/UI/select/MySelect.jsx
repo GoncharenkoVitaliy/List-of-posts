@@ -1,19 +1,23 @@
+import styles from './MySelect.module.css';
 import { nanoid } from "nanoid/non-secure";
 
 export function MySelect({options, defaultValue, value, onChange}) {
     return(
-        <select
-            value={value}
-            onChange={event => onChange(event.target.value)}
-        >
-            <option disabled={true} value="">
-                {defaultValue}
-            </option>
-            {options.map(option =>
-                <option key={nanoid()} value={option.value}>
-                    {option.name}
+        <div >
+            <select
+                className={styles.select}
+                value={value}
+                onChange={event => onChange(event.target.value)}
+            >
+                <option disabled={true} value="">
+                    {defaultValue}
                 </option>
-            )}
-        </select>
+                {options.map(option =>
+                    <option key={nanoid()} value={option.value}>
+                        {option.name}
+                    </option>
+                )}
+            </select>
+        </div>
     )
 }

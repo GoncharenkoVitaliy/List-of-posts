@@ -9,4 +9,6 @@
 .post__content{
     text-align: left;
 }
-.post__btns{}
+.post__btns{
+    display: flex;
+}
