@@ -23,5 +23,3 @@ const MyModal = ({children, visible, setVisible}) => {
 };
 
 export default MyModal;
-
-//! 1:30:20
