@@ -17,6 +17,9 @@ function App() {
 
 export default App;
 
+//! Times: 2:36:40
+// https://www.youtube.com/watch?v=GNrdg3PzpJQ&list=PL6DxKON1uLOHya4bDIynPTCwZHrezUlFs
+
 // Работаем с <TransitionGroup> анимировали удаление/создание постов
 // Декомпазиция - выносим логику по фильтрации и сортировки разносим по разным компанентам
 // создаем свои хуки
