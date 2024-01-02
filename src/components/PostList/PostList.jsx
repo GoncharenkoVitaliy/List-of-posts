@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid/non-secure";
 import { PostItem } from "./PostItem/PostItem";
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import './PostList.css';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import "./PostList.css";
 
 export function PostList({ posts, title, remove }) {
   if (!posts.length) {
