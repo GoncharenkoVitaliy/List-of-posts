@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"; // добываем из url id страницы
 import useFetching from "../../hooks/useFetching";
 import PostService from "../../API/PostService";
-import Loader from "../../components/UI/Loader/Loader";
 import styles from "./PostIdPage.module.css";
 import { nanoid } from "nanoid/non-secure";
+import Loading from "../../components/UI/Loading/Loading";
 
 const PostIdPage = () => {
   const params = useParams();
@@ -31,7 +31,7 @@ const PostIdPage = () => {
         Вы открыли страницу поста c ID: {params.id}
       </h1>
       {isLoading ? (
-        <Loader />
+        <Loading />
       ) : (
         <div className={styles.content}>
           {post.id}. {post.title}
@@ -39,7 +39,7 @@ const PostIdPage = () => {
       )}
       <h2 className={styles.comm}>Комментарии: </h2>
       {isComLoading ? (
-        <Loader />
+        <Loading />
       ) : (
         <div>
           {comments.map((comm) => {

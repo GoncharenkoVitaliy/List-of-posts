@@ -7,7 +7,7 @@ import MyModal from "../../components/UI/MyModal/MyModal";
 import { MyButton } from "../../components/UI/button/MyButton";
 import { usePosts } from "../../hooks/usePosts";
 import PostService from "../../API/PostService";
-import Loader from "../../components/UI/Loader/Loader";
+import Loading from "../../components/UI/Loading/Loading";
 import useFetching from "../../hooks/useFetching";
 import getPageCount from "../../utils/pages";
 import Pagination from "../../components/UI/pagination/Pagination";
@@ -68,7 +68,7 @@ function Posts() {
       {postError && <h2>Произошла ошибка: {postError}</h2>}
       {isPostsLoading ? (
         <div className={styles.loader}>
-          <Loader />
+          <Loading />
         </div>
       ) : (
         <PostList
