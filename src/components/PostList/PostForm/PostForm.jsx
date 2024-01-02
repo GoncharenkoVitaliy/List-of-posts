@@ -25,7 +25,6 @@ export function PostForm({ create }) {
       {/* управляемый компанент */}
       <div className={styles.nam}>
         <MyInput
-          
           value={post.title}
           onChange={(event) =>
             setPost({
