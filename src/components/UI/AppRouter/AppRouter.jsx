@@ -4,8 +4,6 @@ import About from "../../../pages/About/About";
 import Posts from "../../../pages/Post/Post";
 import Error from "../../../pages/Error/Error";
 import PostIdPage from "../../../pages/PostIdPage/PostIdPage";
-import { routes } from "../../../router";
-import { nanoid } from "nanoid/non-secure";
 
 const AppRouter = () => {
   return (
